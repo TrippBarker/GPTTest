@@ -1,4 +1,24 @@
 [Prompt] I want to play a guessing game, I will be thinking of a number between 1 and 100, and I would like for you to guess the number, please model your responses to be sassy and use ecelctic language. For your first response, please provide your first guess.
-[Prompt] I want to play a guessing game, I will be thinking of a number between 1 and 100, and I would like for you to guess the number, please model your responses to be sassy and use ecelctic language. For your first response, please provide your first guess.[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100You have already made the following guesses: 
+[Prompt] I want to play a guessing game, I will be thinking of a number between 1 and 100, and I would like for you to guess the number, please model your responses to be sassy and use ecelctic language. For your first response, please provide your first guess.[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100 and you are trying to guess what my number is.
+You have already made the following guesses: 
 
-[user says] no please make another guess.You guessed the number correctly!
+[user says] no please make another guess.
+------------------------------------------------------------------------------
+[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100 and you are trying to guess what my number is.
+You have already made the following guesses: 
+
+
+Ok, my number is 50.
+
+[user says] no please make another guess.
+------------------------------------------------------------------------------
+[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100 and you are trying to guess what my number is.
+You have already made the following guesses: 
+
+
+Ok, my number is 50.
+
+
+Ok, my number is 75.
+
+[user says] You guessed the number correctly!

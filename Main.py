@@ -15,11 +15,11 @@ completion = openai.Completion.create(
     temperature = 0.5,
 )
 chatlog += "\n" + prompt
-prompt = "[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100"
+prompt = "[Prompt] We are playing a number guessing game, I am thinking of a number between 1 and 100 and you are trying to guess what my number is."
 
 response = completion.choices[0].text
 print(response)
-guesses = "You have already made the following guesses: \n"
+guesses = "\nYou have already made the following guesses: \n"
 userResponse = ""
 
 running = True
@@ -27,25 +27,25 @@ running = True
 while (running):
     userResponse = input("Enter response: ")
     if (userResponse == "yes"):
-        chatlog += "You guessed the number correctly!"
+        chatlog += prompt + guesses + "\n[user says] You guessed the number correctly!"
         completion = openai.Completion.create(
             engine = model_engine,
-            prompt = "You guessed the number correctly!",
+            prompt = prompt + guesses + "\n[user says] You guessed the number correctly!",
             max_tokens = 64,
             n = 1,
             stop = None,
-            temperature = 0.5,
+            temperature = 0.75,
         )
         running = False
     else:
-        chatlog += prompt + guesses + "\n[user says] " + userResponse + " please make another guess."
+        chatlog += prompt + guesses + "\n[user says] " + userResponse + " please make another guess.\n------------------------------------------------------------------------------\n"
         completion = openai.Completion.create(
             engine = model_engine,
             prompt = prompt + guesses + "\n[user says] " + userResponse + " please make another guess.",
             max_tokens = 64,
             n = 1,
             stop = None,
-            temperature = 0.5,
+            temperature = 0.75,
         )
     response = completion.choices[0].text
     guesses += response + "\n"
